@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+
+	<!--
+	AST 10962
+	Introduction To Web
+
+	< Project Information >
+	Primary Programmer:		Herina Tealie
+	Student ID:				H10007813
+	
+	Secondary Programmer:	Modo
+	Student ID:				H1000
+
+	< Team Members >
+	Tina					H1000
+	Marco					H1000
+	Charles					H1000
+	-->
+
+	<head>
+		<meta charset="utf-8">
+		<title>聖公會主愛堂</title>
+		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+		
+		<!-- Preconnect to Google Fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
+		<!-- Font Downloads -->
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+		
+		<!-- CSS Link -->
+		<link href="HKE_Hue.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<!-- GSAP Downloads -->
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+		
+		<!-- GSAP Typing Animation for the banner -->
+		<script>
+			document.addEventListener("DOMContentLoaded", (event) => {
+				gsap.registerPlugin(TextPlugin)
+				
+				var HeaderTL = gsap.timeline()
+				HeaderTL.to(".Banner-Title" , {
+					duration: 2,
+					text: "歡迎來到<br>聖公會主愛堂!",
+					ease: "none",
+				});
+				
+				HeaderTL.to(".Banner-Title" , {
+					duration: 1,
+					text: "",
+					ease: "none",
+				}, ">+2");
+				
+				HeaderTL.to(".Banner-Title" , {
+					duration: 2,
+					text: "我們能夠為您<br>提供什麼服務?",
+					ease: "none",
+				});
+		 	});
+
+		</script>
+		
+		<!-- Nav Bar -->
+		<nav class="Nav">
+			<h1 class="Nav_Title" lang="zh-HK">聖公會主愛堂</h1>
+			<div class="Nav_Div" lang="zh-HK">
+				<a href="#home">首頁</a>
+				<a href="#about">關於我們</a>
+				<a href="#home">委員會</a>
+				<a href="#home">回顧</a>
+				<a href="./gallery">圖片庫</a>
+			</div>
+		</nav>
+
+		<!-- Banner -->
+		<div class="div-Header" id="pinnedSection" >
+			<h1 class="Banner-Title" id="home" lang="zh-HK"></h1>
+
+			<!-- Scroll Down Menu -->
+			<div class="Menu" id="myBox">
+				<h6 lang="zh-HK">向下移</h6>
+			</div>
+		</div>
+		
+		<!-- Latest News -->
+		<div class="News">
+			<h2 lang="zh-HK">最新消息</h2>
+		</div>
+
+		<!-- About Us -->
+		<div class="About" id="about">
+			
+		  	<h2 lang="zh-HK">關於我們</h2>
+
+			<p style="padding-bottom:10px;" lang="zh-HK">
+				Lorem Ipsum Sit Delor
+			</p>
+			
+			<!-- Slideshow -->
+			<script>
+
+				let slideIndex = 0;
+				showSlides(slideIndex);
+
+				// Next/previous controls
+				function plusSlides(n) {
+				showSlides(slideIndex += n);
+				}
+
+				// Thumbnail image controls
+				function currentSlide(n) {
+				showSlides(slideIndex = n);
+				}
+
+				function showSlides(n) {
+				let i;
+				let slides = document.getElementsByClassName("slideshow-slide");
+
+				if (n > slides.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = slides.length}
+
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+
+				slides[slideIndex-1].style.display = "block";
+				}
+			</script>
+
+			<div class="slideshow-container">
+
+				<!-- Slide 1 -->
+				<div class="slideshow-slide fade">
+					<p>Page 1</p>
+				</div>
+
+				<!-- Slide 2 -->
+				<div class="slideshow-slide fade">
+					<p>Page 2</p>
+				</div>
+				
+				<script>
+					let Curr_slide = document.getElementsByClassName("slideshow-slide");
+					Curr_slide[0].style.display = "block";
+				</script>
+
+				<!-- Next/Prev Buttons -->
+				<a class = "prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class = "next" onclick="plusSlides(1)">&#10095;</a>
+
+			</div>
+		</div>
+		
+		<!-- GSAP Scrolling Animation for slide down menu -->
+		<script>
+			gsap.registerPlugin(ScrollTrigger);
+			gsap.to("#myBox", {y:-435, duration: 0.1})
+			
+			let tl = gsap.timeline({
+			  	scrollTrigger: {
+					trigger: "#pinnedSection",
+					pin: true,
+					scrub: 1,
+					start: "top",
+					end: "+=3000",
+			  	}
+			});
+
+			tl.to("#myBox", {y: 1});
+		</script>
+		
+		<p style="margin-top:800px; color:white;" id="end">For Debugging XD!</p>
+		
+	</body>
+</html>

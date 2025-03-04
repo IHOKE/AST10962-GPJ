@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+body[lang="zh-HK"] {
+    font-family: 'Noto Sans TC', serif;
+}
+
+body {
+	font-family: "Outfit", serif;
+  	margin: 0;
+}
+
+nav {
+	margin-top:0px;
+	padding-left:50px;
+	margin-bottom:0px;
+	outline: none;
+	
+	background-color: #267378; /* Dark background for contrast */
+	overflow: hidden; /* Hide scrollbars if content overflows */
+	position: sticky;
+	transition: top 3s ease-in-out; /* Smooth transition for top position change */
+	top: 0; /* Initial top position */
+	z-index: 1; /* Ensure navbar stays on top */
+}
+
+.Nav_Div {
+
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin-left: 20px;
+	margin-bottom: 0px;
+	
+	display:inline-block;
+}
+
+.Nav a {
+	font-family: "Outfit", serif;
+	font-weight: 350;
+	font-size:18px;
+	
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	
+	padding: 14px;
+}
+
+.Nav a:hover {
+	font-family: "Outfit", serif;
+	font-weight: 450;
+	
+	background-color: #ddd;
+	color: black;
+}
+
+.Nav_Title[lang="zh-HK"]{
+	font-size:20px;
+	font-weight:525; 
+	
+	float: left;
+	padding:0px 14px 0px 0px;
+	margin-top: 12px;
+	margin-bottom: 0px;
+	
+	display: inline;
+	color: white;
+}
+
+.div-Header {
+	overflow: hidden;
+	white-space: nowrap;
+	height: 550px;
+	
+	margin-top:0px;
+	padding-top:10px;
+	padding-bottom:30px;
+	width: 100%;
+	
+	background-image: url("Images/Church_Ext1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.Banner-Title {
+	overflow: hidden;
+	white-space: nowrap;
+	
+	padding-top: 350px;
+	padding-left: 80px;
+	padding-bottom: 0px;
+	
+	margin-bottom: 0px;
+	
+	font-family: "Outfit", serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-size: 50px;
+	
+	display:inline-block;
+	line-height:1.05;
+	color:white;
+}
+
+.Menu {
+	overflow: hidden;
+	white-space: nowrap;
+	
+	float: right;
+	margin-right: 100px;
+	margin-bottom: 60px;
+	
+	width: 300px;
+	width: fixed;
+	height: 500px;
+	height: fixed;
+	
+	background-color: #459EBE;
+	transform-origin: top; /* Important for scaling effect */
+	
+	display: flex;
+	
+	justify-content: center;
+	align-items: center;
+}
+
+.Menu h6 {
+	text-align: center;
+	align-self: flex-end;
+	margin-bottom: 20px;
+	
+	font-weight: 400;
+	font-size: 30px;
+	color: white;
+}
+
+h2 {
+
+	font-size: 50px;
+	margin-bottom:0px;
+}
+
+/* About Us */
+.About {
+	margin-left:80px;
+	margin-right:80px;
+}
+
+section {
+	height: 600px;
+	background-color: #f0f0f0;
+	display: flex;
+}
+
+/* Slideshow */
+.slideshow-container{
+
+	height:400px;
+
+	padding-left:30px;
+	padding-top:10px;
+	padding-right:30px;
+	padding-bottom:10px;
+
+	position: relative;
+	display:block;
+
+	border-style:solid;
+	border-color:#7e7e7e;
+	border-radius:10px;
+}
+
+.slideshow-slide{
+	display:none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	transition: 0.6s ease;
+
+	float:left;
+	top:370px;
+	padding-left: 7px;
+	padding-right: 7px;
+
+	color: black;
+
+	font-weight: bold;
+	font-size: 18px;
+
+	border-style:solid;
+	border-radius: 100%;
+	border-color:black;
+	border-width:2px;
+
+	user-select: none;
+}
+
+.prev:hover, .next:hover{
+	background-color: #9f9f9f;
+}
+  
+/* Position the "next button" to the right */
+.next {
+	float: right;
+	right: 30px;
+	border-radius: 100%;
+}
