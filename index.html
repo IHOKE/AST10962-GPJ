@@ -20,7 +20,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>聖公會主愛堂</title>
+		<title>聖公會榮光堂</title>
 		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 		
 		<!-- Preconnect to Google Fonts-->
@@ -49,7 +49,7 @@
 				var HeaderTL = gsap.timeline()
 				HeaderTL.to(".Banner-Title" , {
 					duration: 2,
-					text: "歡迎來到<br>聖公會主愛堂!",
+					text: "歡迎來到<br>聖公會榮光堂!",
 					ease: "none",
 				});
 				
@@ -70,39 +70,90 @@
 		
 		<!-- Nav Bar -->
 		<nav class="Nav" lang="zh-HK">
-			<h1 class="Nav_Title">聖公會主愛堂</h1>
+			<h1 class="Nav_Title">聖公會榮光堂</h1>
 			<div class="Nav_Div">
 				<a href="#home" lang="zh-HK">首頁</a>
-				<a href="./subpage/Committee" lang="zh-HK">委員會</a>
+				<a href="./subpages/Committee" lang="zh-HK">委員會</a>
 				<a href="#home" lang="zh-HK">回顧</a>
-				<a href="./subpage/Gallery" lang="zh-HK">圖片庫</a>
+				<a href="./subpages/Gallery" lang="zh-HK">圖片庫</a>
 			</div>
 		</nav>
 
-		<!-- Banner -->
-		<div class="div-Header" id="pinnedSection" >
-			<h1 class="Banner-Title" id="home" lang="zh-HK"></h1>
+		<!-- Sticky -->
+		<div id="pinnedSection" >
 
-			<!-- Scroll Down Menu -->
-			<div class="Scroll_menu noto" id="myBox">
-				
-				<li style="color:transparent; align-self:flex-start; margin-top:80px;">
-					<tr>
-						<a href="#news" class="noto" lang="zh-HK">最新消息</a>
-					</tr><tr>
-						<a href="#about" class="noto" lang="zh-HK">關於我們</a>
-					</tr>
-				</li>
+			<div class="div-Header">
 
-				<h6 lang="zh-HK">向下移</h6> 
+				<!-- Banner -->
+				<img src="./Images/Emblem.svg" class="Emblem">
+				<h1 class="Banner-Title" id="home" lang="zh-HK"></h1>
+
+				<!-- Scroll Down Menu -->
+				<div class="Scroll_menu" id="myBox">
+					
+					<li style="color:transparent; align-self:flex-start; margin-top:65px;">
+						<tr>
+							<a href="#news" lang="zh-HK">最新消息</a>
+						</tr><tr>
+							<a href="#about" lang="zh-HK">關於我們</a>
+						</tr><tr>
+							<a href="#about" lang="zh-HK">B3</a>
+						</tr><tr>
+							<a href="#about" lang="zh-HK">B4</a>
+						</tr>
+					</li>
+
+					<h6 lang="zh-HK">向下移</h6>
+
+					<!-- GSAP Scrolling Animation for slide down menu -->
+					<script>
+						gsap.registerPlugin(ScrollTrigger);
+						gsap.to("#myBox", {y:-435})
+						
+						let tl = gsap.timeline({
+							scrollTrigger: {
+								trigger: "#pinnedSection",
+								pin: true,
+								scrub: 0.5,
+								start: "top",
+								end: "+=2300",
+							}
+						});
+
+						tl.to("#myBox", {y: 1});
+					</script>
+
+				</div>
+
 			</div>
+			
+			<!-- Footer -->
+			<footer>
+			</footer>
+
 		</div>
-		
+
 		<!-- Latest News -->
 		<div class="News">
-			<br id="news">
-			<h2 lang="zh-HK" style="margin-top: 100px;">最新消息</h2>
-			<p>Hello</p>
+			<br id="news" style="margin-top: 100px;">
+
+				<table class="News">
+					<tr>
+						<td>
+							<h2 lang="zh-HK">最新消息</h2>
+							<p>Placeholder text</p>
+						</td>
+
+						<td>
+							<div class="Calendar">
+								<h2 lang="zh-HK">堂曆</h2>
+							</div>
+						</td>
+					</tr>
+
+						
+				</table>
+
 		</div>
 
 		<!-- About Us -->
@@ -169,24 +220,6 @@
 
 			</div>
 		</div>
-		
-		<!-- GSAP Scrolling Animation for slide down menu -->
-		<script>
-			gsap.registerPlugin(ScrollTrigger);
-			gsap.to("#myBox", {y:-435, duration: 0.1})
-			
-			let tl = gsap.timeline({
-			  	scrollTrigger: {
-					trigger: "#pinnedSection",
-					pin: true,
-					scrub: 1,
-					start: "top",
-					end: "+=3000",
-			  	}
-			});
-
-			tl.to("#myBox", {y: 1});
-		</script>
 		
 		<p style="margin-top:800px; color:white;" id="end">For Debugging XD!</p>
 		

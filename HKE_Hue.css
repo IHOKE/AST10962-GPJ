@@ -9,13 +9,19 @@ body {
   	margin: 0;
 }
 
+section {
+	height: 600px;
+	background-color: #f0f0f0;
+	display: flex;
+}
+
 nav {
 	margin-top:0px;
 	padding-left:50px;
 	margin-bottom:0px;
 	outline: none;
 	
-	background-color: #267378; /* Dark background for contrast */
+	background-color: #4696c8; /* Dark background for contrast */
 	overflow: hidden; /* Hide scrollbars if content overflows */
 	position: sticky;
 	transition: top 3s ease-in-out; /* Smooth transition for top position change */
@@ -72,10 +78,11 @@ nav {
 }
 
 .div-Header {
+
 	overflow: hidden;
 	white-space: nowrap;
-	height: 550px;
-	
+	height: 760px;
+
 	margin-top:0px;
 	padding-top:10px;
 	padding-bottom:30px;
@@ -87,14 +94,29 @@ nav {
 	background-position: center;
 }
 
+.Emblem {
+	position:absolute;
+	left:80px;
+	top:400px;
+
+	width:100px;
+
+	padding:10px 46px 10px 46px;
+
+	border-style:solid;
+	border-width:5px;
+	border-radius:50px;
+	border-color:hsl(189, 100%, 62%);
+	background-color:hsl(0, 0%, 100%, 44%);
+}
+
 .Banner-Title {
 	overflow: hidden;
 	white-space: nowrap;
 	
-	padding-top: 350px;
+	padding-top: 565px;
 	padding-left: 80px;
 	padding-bottom: 0px;
-	
 	margin-bottom: 0px;
 	
 	font-family: "Outfit", serif;
@@ -107,6 +129,7 @@ nav {
 	color:white;
 }
 
+/* Scroll Down Menu */
 .Scroll_menu {
 
 	border-radius:10px;
@@ -115,6 +138,7 @@ nav {
 	white-space: nowrap;
 	
 	float: right;
+	margin-top:0px;
 	margin-right: 100px;
 	margin-bottom: 60px;
 	
@@ -123,7 +147,7 @@ nav {
 	height: 500px;
 	height: fixed;
 	
-	background-color: #459EBE;
+	background-color: #47bfde;
 	transform-origin: top; /* Important for scaling effect */
 	
 	display: flex;
@@ -170,27 +194,81 @@ nav {
 }
 
 .Scroll_menu a:hover {
-	color: #459EBE;
+	color: #3CA4B6;
 	background-color: white;
 }
 
 
 h2 {
-
+	display:block;
 	font-size: 50px;
 	margin-bottom:0px;
 }
 
-/* About Us */
-.About {
-	margin-left:80px;
-	margin-right:80px;
+.News {
+	padding-top:0px;
+	margin-top:0px;
+	margin-left:0px;
 }
 
-section {
-	height: 600px;
-	background-color: #f0f0f0;
-	display: flex;
+.News table {
+	border-style:solid;
+	border-color:white;
+
+	height:600px;
+	width:90%;
+
+	margin-left:78px;
+	margin-right:80px;
+	vertical-align:top;
+
+	margin-top:0px;
+}
+
+.News table td {
+	margin-top:0px;
+	padding-top:0px;
+
+	vertical-align:top;
+}
+
+.Calendar {
+
+	top:30px;
+	margin-left:150px;
+	position:relative;
+	float:right;
+
+	height:450px;
+	width:450px;
+
+	background-color:#2bd7e0;
+	text-align:center;
+	color:white;
+	
+	border-style:solid;
+	border-radius:20px;
+}
+
+.Calendar h2 {
+	top:-30px;
+	position:relative;
+}
+
+aside{
+
+	padding-top:0px;
+	margin-top:0px;
+
+	align-self:top;
+	float:center;
+}
+/* About Us */
+.About {
+	display:block;
+
+	margin-left:80px;
+	margin-right:80px;
 }
 
 /* Slideshow */
@@ -256,4 +334,33 @@ section {
 .fade {
 	animation-name: fade !important;
 	animation-duration: 1.5s !important;
-  }
+}
+
+footer {
+	width:100%;
+	height:300px;
+
+	/* Scuffed eased gradiant */
+	background:
+		linear-gradient(
+		  to bottom,
+		  hsl(189.13, 100%, 45.1%) 0%,
+		  hsl(190.26, 80.34%, 50.81%) 4.4%,
+		  hsl(191.29, 78.68%, 56.37%) 9.7%,
+		  hsl(192.22, 77.16%, 61.76%) 15.6%,
+		  hsl(193.05, 75.78%, 66.94%) 22.1%,
+		  hsl(193.78, 74.53%, 71.88%) 29%,
+		  hsl(194.41, 73.41%, 76.55%) 36.4%,
+		  hsl(194.95, 72.41%, 80.91%) 43.9%,
+		  hsl(195.42, 71.54%, 84.93%) 51.6%,
+		  hsl(195.81, 70.77%, 88.58%) 59.3%,
+		  hsl(196.13, 70.12%, 91.81%) 67%,
+		  hsl(196.4, 69.58%, 94.58%) 74.4%,
+		  hsl(196.6, 69.15%, 96.84%) 81.5%,
+		  hsl(196.75, 68.83%, 98.54%) 88.3%,
+		  hsl(196.84, 68.64%, 99.62%) 94.4%,
+		  hsl(0, 0%, 100%) 100%
+		);
+	;
+
+}
