@@ -20,13 +20,14 @@ nav {
 	padding-left:50px;
 	margin-bottom:0px;
 	outline: none;
-	
-	background-color: #4696c8; /* Dark background for contrast */
-	overflow: hidden; /* Hide scrollbars if content overflows */
+
+	background-color: #4696c8;
+	overflow: hidden;
+	top:-1000px;
 	position: sticky;
-	transition: top 3s ease-in-out; /* Smooth transition for top position change */
-	top: 0; /* Initial top position */
-	z-index: 1; /* Ensure navbar stays on top */
+	transition: top 3s ease-in-out;
+	top: 0;
+	z-index: 1;
 }
 
 .Nav_Div {
@@ -55,12 +56,12 @@ nav {
 
 .Nav a:hover {
 
-	transition: 0.6s ease;
+	transition: 0.3s ease;
 
 	font-family: "Outfit", serif;
 	font-weight: 450;
 	
-	background-color: #ddd;
+	background-color: #dddddd;
 	color: black;
 }
 
@@ -84,7 +85,7 @@ nav {
 	height: 760px;
 
 	margin-top:0px;
-	padding-top:10px;
+	padding-top:0px;
 	padding-bottom:30px;
 	width: 100%;
 	
@@ -114,17 +115,16 @@ nav {
 	overflow: hidden;
 	white-space: nowrap;
 	
-	padding-top: 565px;
-	padding-left: 80px;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
+	top: 585px;
+	left: 80px;
+	position:absolute;
+
 	
 	font-family: "Outfit", serif;
 	font-optical-sizing: auto;
 	font-weight: 600;
 	font-size: 50px;
-	
-	display:inline-block;
+
 	line-height:1.05;
 	color:white;
 }
@@ -138,14 +138,12 @@ nav {
 	white-space: nowrap;
 	
 	float: right;
-	margin-top:0px;
-	margin-right: 100px;
-	margin-bottom: 60px;
+	top:-725px;
+	right:100px;
+	position:absolute;
 	
 	width: 300px;
-	width: fixed;
-	height: 500px;
-	height: fixed;
+	height: 800px;
 	
 	background-color: #47bfde;
 	transform-origin: top; /* Important for scaling effect */
@@ -194,7 +192,8 @@ nav {
 }
 
 .Scroll_menu a:hover {
-	color: #3CA4B6;
+	color: #47bfde;
+	border-color:white;
 	background-color: white;
 }
 
@@ -205,13 +204,35 @@ h2 {
 	margin-bottom:0px;
 }
 
-.News {
+.Godray {
+
+	text-align:left;
+
+	z-index: 0;
+
+	height:600px;
+	width: 350px;
+
+	top:0px;
+	margin-left:40px;
+	padding:0px 50px 50px 50px;
+	position:absolute;
+
+	background:
+		linear-gradient(
+			to bottom,
+			hsl(0, 0%, 100%,80%),
+			hsl(0, 0%, 100%,0%)
+		);
+}
+
+.News-Detailed {
 	padding-top:0px;
-	margin-top:0px;
+	margin-top:75px;
 	margin-left:0px;
 }
 
-.News table {
+.News-Detailed table {
 	border-style:solid;
 	border-color:white;
 
@@ -225,7 +246,7 @@ h2 {
 	margin-top:0px;
 }
 
-.News table td {
+.News-Detailed table td {
 	margin-top:0px;
 	padding-top:0px;
 
@@ -242,7 +263,7 @@ h2 {
 	height:450px;
 	width:450px;
 
-	background-color:#2bd7e0;
+	background-color:#47bfde;
 	text-align:center;
 	color:white;
 	
@@ -336,31 +357,91 @@ aside{
 	animation-duration: 1.5s !important;
 }
 
-footer {
-	width:100%;
-	height:300px;
+.Footer-Fade-T {
 
-	/* Scuffed eased gradiant */
+	margin-top:10px;
+
+	width:100%;
+	height:10px;
+
 	background:
-		linear-gradient(
-		  to bottom,
-		  hsl(189.13, 100%, 45.1%) 0%,
-		  hsl(190.26, 80.34%, 50.81%) 4.4%,
-		  hsl(191.29, 78.68%, 56.37%) 9.7%,
-		  hsl(192.22, 77.16%, 61.76%) 15.6%,
-		  hsl(193.05, 75.78%, 66.94%) 22.1%,
-		  hsl(193.78, 74.53%, 71.88%) 29%,
-		  hsl(194.41, 73.41%, 76.55%) 36.4%,
-		  hsl(194.95, 72.41%, 80.91%) 43.9%,
-		  hsl(195.42, 71.54%, 84.93%) 51.6%,
-		  hsl(195.81, 70.77%, 88.58%) 59.3%,
-		  hsl(196.13, 70.12%, 91.81%) 67%,
-		  hsl(196.4, 69.58%, 94.58%) 74.4%,
-		  hsl(196.6, 69.15%, 96.84%) 81.5%,
-		  hsl(196.75, 68.83%, 98.54%) 88.3%,
-		  hsl(196.84, 68.64%, 99.62%) 94.4%,
-		  hsl(0, 0%, 100%) 100%
-		);
-	;
+	linear-gradient(
+		white,
+		#6fbeee
+	);
+}
+
+.Footer-Fade-B {
+
+	margin-bottom:10px;
+
+	width:100%;
+	height:5px;
+
+	background:
+	linear-gradient(
+		#6fbeee,
+		white
+	);
+}
+.Footer-Main {
+
+	color:white;
+
+	width:100%;
+	height:165px;
+
+	background-color:#6fbeee;
+
+}
+
+.FTable-Main {
+	padding-top:30px;
+	margin-left:80px;
+	width:calc(100% - 180px);
+}
+
+.FTable-Main td{
+	vertical-align: bottom;
+}
+
+.FTable-Left td{
+	border-style:solid;
+	border-radius:10px;
+
+	width:200px;
+	text-align: left;
+	padding-left:20px;
+}
+
+.FTable-Left td:hover{
+	transition: 0.3s ease;
+	border-style:solid;
+	border-color:white;
+	background-color:hsl(0, 0%, 100%,33%);
+	color:#6fbeee;
+}
+
+.FTable-Left a{
+	text-decoration: none;
+	color:white;
+}
+
+.Join-FB {
+	text-align:left;
+	margin-right:50%;
+}
+
+.Join-FB-Img {
+
+	border-radius:5px;
+	border-style:solid;
+	border-color:white;
+
+	padding-left:30px;
+	background-color:#DFE0F5;
+
+	width:170px;
+	height:42px;
 
 }
