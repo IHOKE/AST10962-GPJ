@@ -50,6 +50,9 @@
 <h1>Changelog</h1>
 
 <h2>v0.3.1</h2>
+<p>- Added the second page to Wireframe.ai</p>
+
+<h2>v0.3.1</h2>
 <p>- Added Website Wireframe for design (Adobe Illustrator File)</p>
 <p>- Added Changelogs to README.md</p>
 <p>- Will (probably) start updating Changelog</p>
