@@ -45,3 +45,15 @@
   <i>Follow me on my goddamn <a href="https://x.com/IHOKE_">Twitter</a></i>
 </h6>
 <hr>
+
+<!-- Changelog -->
+<h2>Changelog</h2>
+
+<h4>v0.3.1</h4>
+<p>Added Website Wireframe for design<br>(Adobe Illustrator File)</p>
+<p>Added Changelogs to README.md</p>
+<p>Will (probably) start updating Changelog</p>
+
+<h4>v0.3</h4>
+<p>Added fields and detailed Footer</p>
+<p>Added Favicon, icon and godray to the banner</p>
