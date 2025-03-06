@@ -47,13 +47,13 @@
 <hr>
 
 <!-- Changelog -->
-<h2>Changelog</h2>
+<h1>Changelog</h1>
 
-<h4>v0.3.1</h4>
-<p>Added Website Wireframe for design<br>(Adobe Illustrator File)</p>
-<p>Added Changelogs to README.md</p>
-<p>Will (probably) start updating Changelog</p>
+<h2>v0.3.1</h2>
+<p>- Added Website Wireframe for design (Adobe Illustrator File)</p>
+<p>- Added Changelogs to README.md</p>
+<p>- Will (probably) start updating Changelog</p>
 
-<h4>v0.3</h4>
-<p>Added fields and detailed Footer</p>
-<p>Added Favicon, icon and godray to the banner</p>
+<h2>v0.3</h2>
+<p>- Added fields to and detailed the Footer</p>
+<p>- Added Favicon, icon and godray to the banner</p>
