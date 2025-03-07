@@ -49,8 +49,13 @@
 <!-- Changelog -->
 <h1>Changelog</h1>
 
+<h2>v0.3.2</h2>
+<p>- &#91; Wireframe.ai	&#93; Added Gallery and Event Recap</p>
+<p>- Added folder "Meta" to store project development information</p>
+<p>- &#91; Meta	&#93; &#91; Modo &#93; Added web.pdf - an analysis of the webpage in need of redesign</p>
+
 <h2>v0.3.1</h2>
-<p>- Added the second page to Wireframe.ai</p>
+<p>- &#91; Wireframe.ai	&#93; Added the second page to the headpage</p>
 
 <h2>v0.3.1</h2>
 <p>- Added Website Wireframe for design (Adobe Illustrator File)</p>
