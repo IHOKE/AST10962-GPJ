@@ -1,4 +1,4 @@
-<h1><b>Porject Rebuilt in new repository, will post link here</b></h1>
+<h1><b>Project Rebuilt in new repository, link <a href="https://github.com/IHOKE/AST10926-Church-Website-Redesign">here</a></b></h1>
 
 <hr>
 <h1>AST10926 Project</h1>
